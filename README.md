@@ -1,22 +1,49 @@
-# Apartment Search Script
+Overview of Apartment Script
+============================
 
-This is a Python script that searches for the best apartment offers on OLX and sends them to an email address. The script is built using the following technologies:
+The Apartment Script is a Python project that uses Beautiful Soup to scrape OLX, a popular online marketplace, for the best apartment offers. The script then sends these offers via email to the user.
 
-- Python 3
-- Docker
-- Beautiful Soup
+Dependencies
+------------
 
-## Installation
+The project uses several Python libraries, including Beautiful Soup, Requests, and smtplib. These dependencies are listed in the requirements.txt file.
 
-To run the script, you need to have Docker and Docker Compose installed on your machine. If you don't have them, follow these installation guides:
+Installation
+------------
 
-- [Docker installation guide](https://docs.docker.com/get-docker/)
-- [Docker Compose installation guide](https://docs.docker.com/compose/install/)
+To install the required dependencies, run the following command in your terminal:
 
-Once you have Docker and Docker Compose installed, follow these steps:
+bashCopy code
 
-1. Clone the repository:
+`pip install -r requirements.txt`
 
-```bash
-git clone https://github.com/your-username/apartment-search-script.git
-cd apartment-search-script
+Usage
+-----
+
+To use the script, you will need to modify the `config.py` file to include your email credentials and search parameters. Once this is done, run the following command:
+
+bashCopy code
+
+`python apartment_script.py`
+
+This will start the script, which will scrape OLX and send you an email with the best offers.
+
+Docker
+------
+
+The project also includes a Dockerfile, which can be used to build a Docker image of the script. To build the Docker image, run the following command:
+
+bashCopy code
+
+`docker build -t apartment_script .`
+
+To run the script in a Docker container, use the following command:
+
+bashCopy code
+
+`docker run --rm apartment_script`
+
+Conclusion
+----------
+
+The Apartment Script is a simple but effective tool for finding the best apartment offers on OLX. By using Beautiful Soup and Python, the script can quickly and easily scrape the website and send you an email with the best offers. With the addition of Docker, the project can be easily deployed and run on any system.
