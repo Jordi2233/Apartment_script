@@ -15,7 +15,7 @@ To install the required dependencies, run the following command in your terminal
 
 bashCopy code
 
-`pip install -r requirements.txt`
+```pip install -r requirements.txt```
 
 Usage
 -----
@@ -24,7 +24,7 @@ To use the script, you will need to modify the `config.py` file to include your 
 
 bashCopy code
 
-`python apartment_script.py`
+```python apartment_script.py```
 
 This will start the script, which will scrape OLX and send you an email with the best offers.
 
@@ -35,13 +35,13 @@ The project also includes a Dockerfile, which can be used to build a Docker imag
 
 bashCopy code
 
-`docker build -t apartment_script .`
+```docker build -t apartment_script .```
 
 To run the script in a Docker container, use the following command:
 
 bashCopy code
 
-`docker run --rm apartment_script`
+```docker run --rm apartment_script```
 
 Conclusion
 ----------
